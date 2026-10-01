@@ -1,0 +1,96 @@
+@import "tailwindcss";
+
+@theme {
+  /* Warm legal archive backgrounds */
+  --color-ink-950: #0b0906;
+  --color-ink-900: #171009;
+  --color-ink-800: #241a10;
+  --color-ink-700: #352819;
+
+  /* Brass / gold primary accent */
+  --color-brass-200: #f3e3ac;
+  --color-brass-300: #e6c869;
+  --color-brass-400: #d4af37;
+  --color-brass-500: #b8912b;
+  --color-brass-600: #93701f;
+
+  /* Warm text */
+  --color-parchment-300: #ece2c8;
+  --color-parchment-400: #d7c9a6;
+  --color-parchment-500: #b3a483;
+  --color-parchment-600: #8f8264;
+  --color-parchment-700: #6b6047;
+
+  /* Police / investigator */
+  --color-steel-200: #dbe1e4;
+  --color-steel-300: #b6c0c6;
+  --color-steel-400: #8fa0a8;
+  --color-steel-500: #69818b;
+
+  /* Court */
+  --color-bronze-300: #cf9a5c;
+  --color-bronze-400: #b97c3f;
+  --color-bronze-500: #93602c;
+
+  /* Extra light shades needed by the role cards */
+  --color-brass-100: #f7edc9;
+  --color-bronze-100: #ead0a8;
+}
+
+.input {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border-radius: 0.75rem;
+  background: #0b0906;
+  border: 1px solid rgb(184 145 43 / 0.15);
+  color: #ece2c8;
+  outline: none;
+}
+
+.input:focus {
+  border-color: #d4af37;
+}
+
+/* TRACE login modal text fix */
+
+.sih-login-modal {
+  color: #ece2c8 !important;
+}
+
+.sih-login-modal h2 {
+  color: #ece2c8 !important;
+}
+
+.sih-login-modal label {
+  color: #b3a483 !important;
+}
+
+.sih-login-modal input,
+.sih-login-modal select {
+  color: #ece2c8 !important;
+  background-color: #0b0906 !important;
+}
+
+.sih-login-modal input::placeholder {
+  color: #8f8264 !important;
+}
+
+.sih-login-modal select option {
+  color: #ece2c8 !important;
+  background-color: #171009 !important;
+}
+
+/* TRACE perspective */
+
+.trace-perspective {
+  perspective: 1200px;
+}
+
+.trace-hero-panel {
+  transform: rotateX(6deg) rotateY(-8deg) translateZ(0);
+  transform-style: preserve-3d;
+}
+
+.trace-hero-panel:hover {
+  transform: rotateX(0deg) rotateY(0deg) translateY(-6px);
+}
