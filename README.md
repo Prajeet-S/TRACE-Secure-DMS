@@ -1,8 +1,8 @@
-# NYAAY VAULT – Secure Digital Document & Case Management System
+# TRACE – Secure Digital Document & Case Management System
 
-NYAAY VAULT is a secure digital document and case management system designed to manage legal documents and case-related information with authentication, access control, document integrity verification, audit logging, and secure cloud storage.
+TRACE(Trusted Records, Access & Compliance Engine) is a secure digital document and case management system designed for managing legal documents and case-related information with authentication, role-based access control, document integrity verification, audit logging, and secure cloud storage.
 
-The system provides separate workflows for:
+The system provides dedicated workflows for:
 
 - Police / Investigators
 - Lawyers / Legal Officers
@@ -17,31 +17,31 @@ The system provides separate workflows for:
 - User registration and login
 - JWT-based authentication
 - Role-based access control
-- Password hashing
+- Secure password hashing
 - OTP-based email verification
 - Authentication throttling and security controls
 
 ### 📁 Secure Document Management
 
 - Upload and manage case documents
-- Document metadata stored in the database
-- Actual files stored using Azure Blob Storage
-- File integrity verification using SHA-256 hashes
-- File download and content access
+- Store document metadata in the database
+- Store actual documents using Azure Blob Storage
+- SHA-256 file integrity verification
+- Document download and content access
 - Document replacement and deletion controls
 
 ### ⚖️ Case Management
 
 - Create and manage cases
 - Associate documents with cases
-- Role-based case operations
+- Role-based access to case information
 - Track case-related activities
 
-### 🔗 Document Integrity & Blockchain Ledger
+### 🔗 Blockchain-Based Integrity Ledger
 
-The system maintains a blockchain-style immutable ledger for document-related actions.
+TRACE maintains a blockchain-style ledger for document-related actions.
 
-Each block contains information such as:
+Each blockchain block records information such as:
 
 - Document ID
 - Case ID
@@ -52,21 +52,21 @@ Each block contains information such as:
 - Current block hash
 - Timestamp
 
-This allows the system to verify whether recorded document information has been altered.
+This provides a mechanism for verifying the integrity of recorded document information and detecting unauthorized changes.
 
 ### 📋 Audit Logging
 
-Important actions are recorded in audit logs, including document and case-related operations.
+System activities are recorded through audit logs, allowing document and case-related actions to be tracked.
 
 ### 📧 OTP Verification
 
-Email-based OTP verification is implemented for authentication-related workflows.
+TRACE uses email-based OTP verification for authentication-related workflows.
 
-### ☁️ Azure Integration
+### ☁️ Azure Cloud Storage
 
-Azure Blob Storage is used for storing uploaded documents.
+Azure Blob Storage is used to store uploaded documents.
 
-The backend interacts with Azure Storage through Azure CLI using authenticated Azure CLI sessions rather than storing Azure storage keys directly in the source code.
+The backend interacts with Azure Storage using Azure CLI with authenticated Azure sessions rather than embedding Azure storage credentials in the source code.
 
 ---
 
@@ -74,14 +74,14 @@ The backend interacts with Azure Storage through Azure CLI using authenticated A
 
 ```text
                     ┌──────────────────────┐
-                    │   React Frontend     │
-                    │   (Vite)             │
+                    │    React Frontend    │
+                    │        (Vite)        │
                     └──────────┬───────────┘
                                │
-                               │ HTTP / REST API
+                               │ REST API
                                ▼
                     ┌──────────────────────┐
-                    │   FastAPI Backend    │
+                    │    FastAPI Backend   │
                     │                      │
                     │ Authentication       │
                     │ Authorization        │
@@ -100,5 +100,5 @@ The backend interacts with Azure Storage through Azure CLI using authenticated A
         │ Documents       │              │                  │
         │ Audit Logs      │              └──────────────────┘
         │ Blockchain      │
-        │ OTP records     │
+        │ OTP Records     │
         └─────────────────┘
